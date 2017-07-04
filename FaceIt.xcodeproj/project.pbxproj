@@ -54,14 +54,22 @@
 		F139999E1F0C10E100F07010 /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
-				F139999F1F0C10E100F07010 /* AppDelegate.swift */,
+				F13999B11F0C10F600F07010 /* Supporting Files */,
 				F13999A11F0C10E100F07010 /* ViewController.swift */,
 				F13999A31F0C10E100F07010 /* Main.storyboard */,
 				F13999A61F0C10E100F07010 /* Assets.xcassets */,
+			);
+			path = FaceIt;
+			sourceTree = "<group>";
+		};
+		F13999B11F0C10F600F07010 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F139999F1F0C10E100F07010 /* AppDelegate.swift */,
 				F13999A81F0C10E100F07010 /* LaunchScreen.storyboard */,
 				F13999AB1F0C10E100F07010 /* Info.plist */,
 			);
-			path = FaceIt;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
