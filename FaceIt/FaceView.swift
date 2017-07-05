@@ -50,7 +50,7 @@ class FaceView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        UIColor.brown.set()
+        UIColor.black.set()
         pathForSkull().stroke()
         UIColor.black.set()
         pathForEye(.left).stroke()
