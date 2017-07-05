@@ -22,6 +22,10 @@ class FaceView: UIView {
     
     @IBInspectable
     var lineWidth: CGFloat = 5.0
+    
+    @IBInspectable
+    var color: UIColor = UIColor.black
+    
     private var skullRadius: CGFloat {
         return min(bounds.width, bounds.height) / 2 * scale
     }
@@ -93,9 +97,9 @@ class FaceView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        UIColor.black.set()
+        color.set()
         pathForSkull().stroke()
-        UIColor.black.set()
+        color.set()
         pathForEye(.left).stroke()
         pathForEye(.right).stroke()
         pathForMouth().stroke()
