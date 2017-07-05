@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+@IBDesignable
 class FaceView: UIView {
 
     @IBInspectable
@@ -16,6 +16,9 @@ class FaceView: UIView {
     
     @IBInspectable
     var eyesOpen: Bool = false
+    
+    @IBInspectable
+    var mouthCurvature: Double = -1.0 //1.0: smile, -1.0: frown
     
     private var skullRadius: CGFloat {
         return min(bounds.width, bounds.height) / 2 * scale
@@ -55,6 +58,7 @@ class FaceView: UIView {
         return path
     }
     
+    
     private func pathForMouth() -> UIBezierPath {
         let mouthWidth = skullRadius/Ratios.skullRadiusToMouthWidth
         let mouthHeight = skullRadius/Ratios.skullRadiusToMouthHeight
@@ -66,7 +70,17 @@ class FaceView: UIView {
             width: mouthWidth,
             height: mouthHeight)
         
-        let path = UIBezierPath(rect: mouthRect)
+        let start = CGPoint(x: mouthRect.minX, y: mouthRect.midY)
+        let end = CGPoint(x: mouthRect.maxX, y: mouthRect.midY)
+        
+        let smileOffset = CGFloat(max(-1,min(mouthCurvature,1)))*mouthRect.height
+        
+        let cp1 = CGPoint(x: mouthRect.minX + (mouthRect.maxX-mouthRect.minX)/3, y: mouthRect.midY+smileOffset)
+        let cp2 = CGPoint(x: mouthRect.minX + 2*(mouthRect.maxX-mouthRect.minX)/3, y: mouthRect.midY+smileOffset )
+        let path = UIBezierPath()
+        path.move(to: start)
+        path.addCurve(to: end, controlPoint1: cp1, controlPoint2: cp2)
+        path.lineWidth = 5.0
         return path
     }
     
