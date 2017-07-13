@@ -12,19 +12,53 @@ import UIKit
 class FaceView: UIView {
 
     @IBInspectable
-    var scale: CGFloat = 0.9
+    var scale: CGFloat = 0.9 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
-    var eyesOpen: Bool = false
+    var eyesOpen: Bool = false {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+
     
     @IBInspectable
     var mouthCurvature: Double = -1.0 //1.0: smile, -1.0: frown
+    {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable
+    var lineWidth: CGFloat = 5.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+
     
     @IBInspectable
-    var lineWidth: CGFloat = 5.0
+    var color: UIColor = UIColor.black {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+
     
-    @IBInspectable
-    var color: UIColor = UIColor.black
+    func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer){
+        switch pinchRecognizer.state {
+        case .changed,.ended:
+            scale *= pinchRecognizer.scale
+            pinchRecognizer.scale = 1
+        default:
+            break
+        }
+    }
     
     private var skullRadius: CGFloat {
         return min(bounds.width, bounds.height) / 2 * scale

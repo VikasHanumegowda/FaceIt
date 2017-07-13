@@ -61,9 +61,9 @@
 				F13999B11F0C10F600F07010 /* Supporting Files */,
 				F13999A11F0C10E100F07010 /* ViewController.swift */,
 				F148F2BF1F172AE600064E70 /* FacialExpression.swift */,
+				F13999B21F0C117800F07010 /* FaceView.swift */,
 				F13999A31F0C10E100F07010 /* Main.storyboard */,
 				F13999A61F0C10E100F07010 /* Assets.xcassets */,
-				F13999B21F0C117800F07010 /* FaceView.swift */,
 			);
 			path = FaceIt;
 			sourceTree = "<group>";
