@@ -49,10 +49,13 @@
                             <constraint firstItem="wzu-I3-2vL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="f7q-Xg-Szh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="wzu-I3-2vL" id="pmf-42-LwD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="-448"/>
+            <point key="canvasLocation" x="-906" y="-428"/>
         </scene>
     </scenes>
 </document>
