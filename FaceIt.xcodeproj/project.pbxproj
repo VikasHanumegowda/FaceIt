@@ -13,7 +13,9 @@
 		F13999A71F0C10E100F07010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13999A61F0C10E100F07010 /* Assets.xcassets */; };
 		F13999AA1F0C10E100F07010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13999A81F0C10E100F07010 /* LaunchScreen.storyboard */; };
 		F13999B31F0C117800F07010 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13999B21F0C117800F07010 /* FaceView.swift */; };
+		F14473281F1F14B4006A9F7E /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14473271F1F14B4006A9F7E /* EmotionsViewController.swift */; };
 		F148F2C01F172AE600064E70 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148F2BF1F172AE600064E70 /* FacialExpression.swift */; };
+		F1E2112B1F1F3798003241B2 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2112A1F1F3798003241B2 /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		F13999A91F0C10E100F07010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13999AB1F0C10E100F07010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13999B21F0C117800F07010 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		F14473271F1F14B4006A9F7E /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		F148F2BF1F172AE600064E70 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		F1E2112A1F1F3798003241B2 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				F148F2BF1F172AE600064E70 /* FacialExpression.swift */,
 				F13999B21F0C117800F07010 /* FaceView.swift */,
 				F13999A31F0C10E100F07010 /* Main.storyboard */,
+				F1E2112A1F1F3798003241B2 /* SplitViewController.swift */,
+				F14473271F1F14B4006A9F7E /* EmotionsViewController.swift */,
 				F13999A61F0C10E100F07010 /* Assets.xcassets */,
 			);
 			path = FaceIt;
@@ -151,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E2112B1F1F3798003241B2 /* SplitViewController.swift in Sources */,
 				F13999A21F0C10E100F07010 /* FaceViewController.swift in Sources */,
 				F148F2C01F172AE600064E70 /* FacialExpression.swift in Sources */,
+				F14473281F1F14B4006A9F7E /* EmotionsViewController.swift in Sources */,
 				F13999A01F0C10E100F07010 /* AppDelegate.swift in Sources */,
 				F13999B31F0C117800F07010 /* FaceView.swift in Sources */,
 			);
